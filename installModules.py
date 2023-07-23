@@ -24,7 +24,7 @@ def setup_logging(log_file, console_output=True):
     )
 
 def get_user_home_directory():
-    return os.path.expanduser("/Users/h.clewlow/Desktop/ElixirLabs/PythonScripts/File Organiser/Logs")
+    return os.path.expanduser("LOG PATH")
 
 def log_table(table):
     logging.info("\nInstalled Modules:\n" + table)
