@@ -1,7 +1,4 @@
 # PythonModuleHelper: Simplifying Package Management
-
-![PythonModuleHelper Logo](link_to_logo)
-
 PythonModuleHelper is a versatile and user-friendly Python package that streamlines the process of installing, updating, and uninstalling Python modules. Whether you are a seasoned developer or just starting with Python, this open-source tool simplifies package management, making it an indispensable asset for your projects.
 
 ## Features
