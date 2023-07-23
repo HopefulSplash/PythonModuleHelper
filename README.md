@@ -1,68 +1,77 @@
 # PythonModuleHelper: Simplifying Package Management
-PythonModuleHelper is a versatile and user-friendly Python package that streamlines the process of installing, updating, and uninstalling Python modules. Whether you are a seasoned developer or just starting with Python, this open-source tool simplifies package management, making it an indispensable asset for your projects.
 
-## Features
+PythonModuleHelper is a versatile Python script designed to simplify package management by providing easy installation, updating, and uninstalling of Python modules. This script utilizes the `pip` package manager to handle module operations, making it a powerful tool for developers seeking an efficient and user-friendly package management experience.
 
-- **Effortless Installation**: PythonModuleHelper ensures a smooth and straightforward installation process, enabling you to get started quickly without any hassle.
+## Prerequisites
 
-- **Seamless Updates**: Stay updated with the latest versions of your Python modules effortlessly. PythonModuleHelper simplifies the process of updating your packages, so you always have access to the latest features and bug fixes.
+Before using PythonModuleHelper, ensure that you have the following installed on your system:
 
-- **Intuitive Uninstalling**: Say goodbye to the tedious task of manually uninstalling Python modules. With PythonModuleHelper, you can effortlessly remove unnecessary or outdated packages from your environment.
-
-- **Smart Dependency Management**: PythonModuleHelper intelligently handles package dependencies, ensuring your projects remain consistent and error-free by managing inter-module relationships.
-
-- **Version Control Integration**: Seamlessly integrate PythonModuleHelper into your version control workflows, allowing you to track package changes and manage dependencies effectively throughout different development stages.
-
-- **Customizable Configuration**: Tailor PythonModuleHelper to suit your specific project requirements using its customizable configuration options. Adapt the tool to seamlessly align with your unique development workflow.
-
-- **Cross-Platform Compatibility**: PythonModuleHelper is designed to work flawlessly across various operating systems, ensuring a consistent experience for all developers, regardless of their platform.
+- Python 3.x
+- `pip` package manager
 
 ## Getting Started
 
-1. Clone the repository to your local machine using `git clone https://github.com/username/PythonModuleHelper.git`.
-
-2. Ensure you have Python installed on your system. PythonModuleHelper is compatible with Python 3.x versions.
-
-3. Run the `setup.py` script to install PythonModuleHelper:
+1. Clone the repository to your local machine:
 
    ```bash
-   python setup.py install
+   git clone https://github.com/username/PythonModuleHelper.git
+   cd PythonModuleHelper
    ```
 
-4. Start managing your Python packages effortlessly using the provided CLI or integrated API.
+2. Install the required modules:
 
-## Usage
+   Before running the script, you need to install the prerequisite modules `termcolor` and `tabulate`. PythonModuleHelper provides a built-in function to do this:
 
-**Installing Required Modules:**
+   ```bash
+   python script_name.py install_prereq_modules
+   ```
 
-To install the required modules for your project, simply execute the following command:
+   If you encounter any issues during the installation, please check your Python and `pip` installations and ensure they are up-to-date.
 
-```bash
-python script_name.py install
-```
+3. Execute PythonModuleHelper commands:
 
-**Uninstalling Modules:**
+   The script can be used to perform various tasks related to package management. Here are the available commands:
 
-To uninstall unwanted modules from your environment, use the following command:
+   - **Install Required Modules**:
 
-```bash
-python script_name.py uninstall
-```
+     To install a list of required modules, provide the module names as arguments:
 
-**Checking for Updates:**
+     ```bash
+     python script_name.py install_required_modules module1 module2 module3
+     ```
 
-To check for updates for installed modules, use the following command:
+     The script will attempt to install the specified modules along with their dependencies. If a module is already installed, it will be skipped.
 
-```bash
-python script_name.py update
-```
+   - **Uninstall Modules**:
 
-## Contribution Guidelines
+     To uninstall unwanted modules, provide the module names as arguments:
 
-We welcome contributions from the community to enhance PythonModuleHelper's functionality and usability. Whether it's adding new features, improving documentation, or fixing bugs, your contributions are highly valued. To contribute, please follow our [contribution guidelines](link_to_contributing.md).
+     ```bash
+     python script_name.py uninstall_required_modules module1 module2 module3
+     ```
 
-## Support and Feedback
+     The script will check if each module is installed and prompt you to confirm the uninstallation. If you choose to proceed, it will uninstall the module from your environment.
 
-If you encounter any issues or have questions related to PythonModuleHelper, don't hesitate to [open an issue](link_to_issues). We appreciate your feedback and are committed to continuously improving the tool to meet the needs of the Python community.
+   - **Check for Updates**:
+
+     To check for updates for installed modules, use the following command:
+
+     ```bash
+     python script_name.py check_for_updates module1 module2 module3
+     ```
+
+     The script will compare the currently installed versions of the specified modules with the latest versions available on PyPI. If any updates are found, it will display a table with the outdated modules.
+
+## Logging
+
+PythonModuleHelper generates log files to keep track of its operations. The logs are stored in the directory specified by `get_user_home_directory()`. The log filenames are `install_log.txt` for installation-related logs and `uninstall_log.txt` for uninstallation-related logs.
+
+## Feedback and Support
+
+If you encounter any issues, have suggestions, or need assistance with PythonModuleHelper, please feel free to [open an issue](link_to_issues) on the GitHub repository. Our responsive community and maintainers will be glad to help.
+
+## Contribution
+
+We welcome contributions from the community to enhance PythonModuleHelper's functionality and usability. To contribute, please follow our [contribution guidelines](link_to_contributing.md).
 
 Join us in simplifying Python package management with PythonModuleHelper! Happy coding! 🐍💻
